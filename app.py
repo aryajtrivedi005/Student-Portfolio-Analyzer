@@ -125,9 +125,9 @@ else:
     ollama_model = ollama_client.select_best_model() if is_ollama_online else None
 
     if is_ollama_online:
-        st.sidebar.success(f"🟢 Local AI (Ollama): Active\nModel: `{ollama_model}`")
+        st.sidebar.success(f"🟢 Local LLM (Ollama): Active\nModel: `{ollama_model}`")
     else:
-        st.sidebar.warning("🟡 Local AI (Ollama): Offline\nRunning in Deterministic Mode")
+        st.sidebar.info("ℹ️ Analytics Engine: Active\n(Deterministic Scoring & RAG Active)")
 
     st.sidebar.caption("🔒 Privacy First: All student portfolio data processed locally.")
 
